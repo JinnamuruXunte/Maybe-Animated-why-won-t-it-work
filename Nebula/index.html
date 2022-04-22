@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <button>Welcome</button>
+
+    <div class="overlay">
+        <a href="#" class="exit"><img src="images/close.svg" alt="Exit navigation"></a>
+
+        <div class="menu">
+            <div class="menu-container">
+                <p class="catagory">Category</p>
+
+                <ul>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                </ul>
+            </div>
+            <div class="menu">
+            <div class="menu-container">
+                <p class="catagory">Category</p>
+
+                <ul>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                </ul>
+            </div>
+            <div class="menu-container">
+                <p class="catagory">Category</p>
+
+                <ul>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                </ul>
+            </div><div class="menu-container">
+                <p class="catagory">Category</p>
+
+                <ul>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                </ul>
+            </div>
+            <div class="menu-container">
+                <p class="catagory">Category</p>
+
+                <ul>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                </ul>
+            </div>
+            <div class="menu-container">
+                <p class="catagory">Category</p>
+
+                <ul>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                </ul>
+            </div>
+            <div class="menu-container">
+                <p class="catagory">Category</p>
+
+                <ul>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                </ul>
+            </div>
+            <div class="menu-container">
+                <p class="catagory">Category</p>
+
+                <ul>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                </ul>
+            </div>
+            <div class="menu-container">
+                <p class="catagory">Category</p>
+
+                <ul>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                </ul>
+            </div>
+            <div class="menu-container">
+                <p class="catagory">Category</p>
+
+                <ul>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                </ul>
+            </div>
+            <div class="menu-container">
+                <p class="catagory">Category</p>
+
+                <ul>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                    <li><a href="#">Link to somewhere</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js" integrity="sha512-6zTDRWNxo8vI6JZYDCwhrJpg5icK3P4HNnW3czsO5Scb3lAoPDam+/wF3eog4hxcl0h44d0XlIcFkuoSaWHQ2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+        const button = document.querySelector('button');
+        const overlay = document.querySelector('.overlay');
+        const exit = document.querySelector('.exit');
+
+        var tl = gsap.timeline({defaults:{duration: 1, ease: Back.easeOut.config(2)}})
+
+        tl.paused(true);
+        tl.to(".overlay", {clipPath: 'circle(100%)'})
+        tl.to(".menu-container", {opacity: 1, y: '30px', stagger: 0.1}, "-=1")
+
+
+
+
+        button.addEventListener('click', () => {
+            tl.play();
+        })
+
+        exit.addEventListener('click', () => {
+            tl.reverse();
+        })
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
